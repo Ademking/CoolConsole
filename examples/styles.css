@@ -1,0 +1,23 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+
+h1 {
+    
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* Custom Class for CoolConsole */
+.custom-console {
+    
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 2px red ;
+    font-weight: normal;
+}

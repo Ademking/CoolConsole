@@ -42,7 +42,7 @@ The CoolConsole library is a single JavaScript file, and you reference it with t
 
 You Have Plenty of Options 😎👌
 
-## Basic Usage
+> ### Basic Usage
 
 ### cc() :
 
@@ -297,7 +297,7 @@ RESULT IMAGE HERE !!
 
 You want Icons in your Console Log ? 😎
 
-You can make console.log messages with Custom Icons ---> Icons List [Here](#icons-list)
+You can make console.log messages with Custom Icons ---> Icons List [Here](#list-of-icons)
 
 **cc_icon( ICON , TEXT , [ TITLE ]);**
 
@@ -318,7 +318,7 @@ You can make console.log messages with Custom Icons ---> Icons List [Here](#icon
 
 -----
 
-### Advanced Usage
+> ### Advanced Usage
 
 ### cc_custom() :
 #### CoolConsole with Custom CSS style

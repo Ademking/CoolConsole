@@ -1,6 +1,18 @@
 # CoolConsole
 😎 CoolConsole Library : The Coolest Browser Console ever 
 
+<div align="center">
+<h1>CoolConsole.js 😎</h1>
+
+<a href="https://www.emojione.com/emoji/1f410">
+<img alt="CoolConsole" src="https://i.imgur.com/BccwhSM.gif" />
+</a>
+
+<p>😎 CoolConsole Library : The Coolest Browser Console ever </p>
+</div>
+
+
+![](https://i.imgur.com/BccwhSM.gif)
 # What is CoolConsole?
 
 This Library lets you write Beautiful "console.Log()" in your Google Chrome Console without the hassle of having to add CSS styles or SVG icons.
@@ -304,7 +316,8 @@ You can make console.log messages with Custom Icons ---> Icons List [Here](#list
         [Title] {string} : (Optional) Title of your Message
 
 * Example :
- ```javascript
+
+```javascript
     cc_icon(icon_diamond, "Wowww");
     /* Console.log with Diamond Icon and with no Title */
     cc_icon(icon_facebook, "https://facebook.com/Ademkouki.Officiel", "Facebook");

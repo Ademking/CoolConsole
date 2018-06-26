@@ -493,7 +493,7 @@ cc("Text Here" , "#ff00ff" );
 
 
 
-## Note
+# Note
 
 This library is made in 2 days ( + 1 day for documentation )
 

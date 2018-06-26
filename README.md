@@ -1,10 +1,8 @@
 <div align="center">
-<h1>CoolConsole.js 😎</h1>
-
 <a href="https://www.emojione.com/emoji/1f410">
+<h1>CoolConsole.js 😎</h1>
 <img alt="CoolConsole" src="https://i.imgur.com/BccwhSM.gif" />
 </a>
-
 <p>😎 CoolConsole Library : The Coolest Browser Console ever </p>
 </div>
 

@@ -34,6 +34,10 @@ There are several ways to start using CoolConsole. You can:
 * Download the CoolConsole library from  [Here]("#")
 * Include CoolConsole from a CDN. If you don't want to download and host CoolConsole yourself, you can include it from a CDN (Content Delivery Network).
 
+   ```html
+   <script src="https://cdn.rawgit.com/Ademking/CoolConsole/23c8707c/CoolConsole.min.js"></script>
+   ```
+
 The CoolConsole library is a single JavaScript file, and you reference it with the HTML 
 
 ```javascript

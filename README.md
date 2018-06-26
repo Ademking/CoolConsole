@@ -1,6 +1,3 @@
-# CoolConsole
-😎 CoolConsole Library : The Coolest Browser Console ever 
-
 <div align="center">
 <h1>CoolConsole.js 😎</h1>
 
@@ -11,8 +8,6 @@
 <p>😎 CoolConsole Library : The Coolest Browser Console ever </p>
 </div>
 
-
-![](https://i.imgur.com/BccwhSM.gif)
 # What is CoolConsole?
 
 This Library lets you write Beautiful "console.Log()" in your Google Chrome Console without the hassle of having to add CSS styles or SVG icons.

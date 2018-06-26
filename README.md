@@ -31,7 +31,7 @@ There are no other libraries that CoolConsole is dependent of 😉
 
 ## Getting Started
 There are several ways to start using CoolConsole. You can:
-* Download the CoolConsole library from  [Here]("#")
+* Download the CoolConsole library from  [Here]("https://github.com/Ademking/CoolConsole/archive/master.zip")
 * Include CoolConsole from a CDN. If you don't want to download and host CoolConsole yourself, you can include it from a CDN (Content Delivery Network).
 
    ```html
@@ -40,7 +40,7 @@ There are several ways to start using CoolConsole. You can:
 
 The CoolConsole library is a single JavaScript file, and you reference it with the HTML 
 
-```javascript
+```html
 <html>
     <head>
         <script src="CoolConsole.js"></script>

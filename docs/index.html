@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CoolConsole: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">CoolConsole</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><div align="center">
+<a href="https://github.com/Ademking/CoolConsole/">
+<h1>CoolConsole.js 😎</h1>
+<img alt="CoolConsole" src="https://i.imgur.com/BccwhSM.gif" />
+</a>
+<p>😎 CoolConsole Library : The Coolest Browser Console ever </p>
+   <img alt="CoolConsole" src="https://i.imgur.com/BLzLqRJ.gif" />
+</div>
+
+<h1>What is CoolConsole?</h1><p>This Library lets you write Beautiful &quot;console.Log()&quot; in your Google Chrome Console without the hassle of having to add CSS styles or SVG icons.</p>
+<h2>Table of Contents</h2><ul>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="basic-usage">Basic Usage</a></li>
+<li><a href="advanced-usage">Advanced Usage</a></li>
+</ul>
+</li>
+<li><a href="#list-of-styles">List Of Styles</a></li>
+<li><a href="#list-of-icons">List Of Icons</a></li>
+<li><a href="#note">Note</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<h2>Dependencies</h2><p>There are no other libraries that CoolConsole is dependent of 😉</p>
+<h2>Getting Started</h2><p>There are several ways to start using CoolConsole. You can:</p>
+<ul>
+<li>Download the CoolConsole library from  <a href="&quot;#&quot;">Here</a></li>
+<li>Include CoolConsole from a CDN. If you don't want to download and host CoolConsole yourself, you can include it from a CDN (Content Delivery Network).</li>
+</ul>
+<p>The CoolConsole library is a single JavaScript file, and you reference it with the HTML </p>
+<pre class="prettyprint source lang-javascript"><code>&lt;html>
+    &lt;head>
+        &lt;script src=&quot;CoolConsole.js&quot;>&lt;/script>
+    &lt;/head>
+    &lt;body> 
+        ... 
+    &lt;/body>
+&lt;/html></code></pre><h2>Usage</h2><p>You Have Plenty of Options 😎👌</p>
+<blockquote>
+<h3>Basic Usage</h3></blockquote>
+<h3>cc() :</h3><p>Default CoolConsole (with multi texts and styles)</p>
+<p><strong>cc ( TEXT , [ STYLES ... ] ) ;</strong></p>
+<p>There are 2 types of params : <strong>STYLES (Optinal)</strong> and <strong>TEXT</strong></p>
+<pre class="prettyprint source"><code>TEXT {style}    : Text you want to write
+
+[ STYLES ]  {*} : (Optional) you can check list of STYLES [here](#list-of-styles)</code></pre><ul>
+<li>Example :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc(&quot;Hello World&quot;, bold, large, red, underline);
+    // this line will generate console.log message with bold, large, red , underline style
+    // see result below</code></pre><p><img src="https://i.imgur.com/HlYxDMD.png" alt=""></p>
+<p>you can also write multiple texts with multiple styles :</p>
+<p><strong>cc(  FistText ,  [ STYLES... ], SecondText , [ STYLES... ] , Nth-Text, [ STYLES ...] );</strong></p>
+<ul>
+<li>Example :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc(&quot;CoolConsole&quot;, bold, bg_red, white , large ,&quot; is the Coolest&quot;, red, medium);
+    // this line will generate console.log message with :
+    // bold, red background, white text , large size &quot;CoolConsole
+    // red, medium size &quot;is the Coolest&quot;
+    // see result below</code></pre><p><img src="https://i.imgur.com/vjzVnZa.png" alt=""></p>
+<hr>
+<h3>cc_primary() - cc_success() - cc_info() - cc_warning() - cc_danger() - cc_error()</h3><p>Like CSS Frameworks like <strong>Bootstrap</strong>, <strong>Foundation</strong>, etc... 
+Theses functions lets you generate colorful Console.log messages for your needs :</p>
+<p><strong>cc_primary ( TEXT , [ TITLE ] , [ CUSTOM TITLE ] );</strong></p>
+<p><strong>cc_success ( TEXT , [ TITLE ] , [ CUSTOM TITLE ] );</strong></p>
+<p><strong>cc_info    ( TEXT , [ TITLE ] , [ CUSTOM TITLE ] );</strong></p>
+<p><strong>cc_warning ( TEXT , [ TITLE ] , [ CUSTOM TITLE ] );</strong></p>
+<p><strong>cc_danger  ( TEXT , [ TITLE ] , [ CUSTOM TITLE ] );</strong></p>
+<p><strong>cc_error   ( TEXT , [ TITLE ] , [ CUSTOM TITLE ] );</strong></p>
+<pre class="prettyprint source"><code>TEXT {string} : the text you want to write
+
+[TITLE] {boolean}: (Optional) if you want to add Default Title (Picture Below)
+
+[CUSTOM TITLE] {string} : (Optinal) if you want to add your custom Title (TITLE must be true)</code></pre><ul>
+<li>Examples :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc_primary(&quot;Hello Folks !&quot;);
+    // this line will generate console.log message with Primary Style (Without Title)
+    cc_info(&quot;2 + 2 is 4 Minus 1 Dat's 3 Quick Maths&quot; , true);
+    // this line will generate console.log message with Info Style (With Default Title)
+    cc_danger(&quot;Boooooooooom !&quot; , true, &quot;Explotion&quot;);
+    // this line will generate console.log message with Danger Style (With Custom Title)</code></pre><p><img src="https://i.imgur.com/9xjNxA7.png" alt=""></p>
+<hr>
+<h3>cc_color() : CoolConsole with Custom Font Color</h3><p>If you're typing too fast and you have no-time for styling , this is just made for you</p>
+<p><strong>cc_color(TEXT , COLOR);</strong></p>
+<pre class="prettyprint source"><code>TEXT {string} : the text you want to write
+
+COLOR {string} : the color of text</code></pre><p>Note: color must be a valid color like (<strong>&quot;red&quot;</strong> , <strong>&quot;green&quot;</strong> , <strong>&quot;blue&quot;</strong> ...) Or you can use RGB colors <strong>&quot;#ffffff&quot;</strong></p>
+<ul>
+<li>Example :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc_color(&quot;This is a Red Text !&quot;, &quot;red&quot;);
+    // Console.log with red font color
+    cc_color(&quot;This is a #ff00ff Text !&quot;, &quot;#ff00ff&quot;);
+    // Console.log with #ff00ff font-color</code></pre><p><img src="https://i.imgur.com/Pc5VokM.png" alt=""></p>
+<hr>
+<h3>cc_bold() - cc_italic() - cc_midline() - cc_underline() cc_xsmall() - cc_small() - cc_medium() - cc_large() - cc_xlarge()</h3><p>   If you're typing too fast and you have no-time for styling , this is just made for you</p>
+<p><strong>cc_bold(TEXT);</strong></p>
+<p><strong>cc_italic(TEXT);</strong></p>
+<p><strong>cc_midline(TEXT);</strong></p>
+<p><strong>cc_underline(TEXT);</strong></p>
+<p><strong>cc_small(TEXT);</strong></p>
+<p><strong>cc_medium(TEXT);</strong></p>
+<p><strong>cc_large(TEXT);</strong></p>
+<p><strong>cc_xlarge(TEXT);</strong></p>
+<pre class="prettyprint source"><code>TEXT {string} : the text you want to write</code></pre><ul>
+<li>Example :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc_bold(&quot;This is BOLD&quot;);
+    cc_italic(&quot;This is Italic&quot;);
+    cc_midline(&quot;This is MidLine&quot;);
+    cc_underline(&quot;This is Underline&quot;);
+    cc_xsmall(&quot;This is XSmall&quot;);
+    cc_small(&quot;This is Small&quot;);
+    cc_medium(&quot;This is Medium&quot;);
+    cc_large(&quot;This is Large&quot;);
+    cc_xlarge(&quot;This is XLarge&quot;);
+</code></pre><p><img src="https://i.imgur.com/YTx7O3W.png" alt=""></p>
+<hr>
+<h3>cc_rainbow()</h3><h4>Rainbow Text 🌈</h4><p>This function lets you write console.log message with rainbow colors 🌈 ( <em>Just for fun !</em> )</p>
+<p><strong>cc_rainbow(TEXT)</strong></p>
+<pre class="prettyprint source"><code>TEXT {string} : the text you want to write</code></pre><ul>
+<li>Example :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc_rainbow(&quot;RAINBOWWWWWWWWW&quot;);</code></pre><p><img src="https://i.imgur.com/lXircRZ.png" alt=""></p>
+<hr>
+<h3>cc_zebre() -</h3><h4>Black &amp; White Text 🦓</h4><p>This function lets you write console.log message with Black &amp; White colors 🦓 ( <em>Just for fun !</em> )</p>
+<p><strong>cc_zebre(TEXT)</strong></p>
+<pre class="prettyprint source"><code>TEXT {string} : the text you want to write</code></pre><ul>
+<li>Example :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc_zebre(&quot;This Text is Black & White!&quot;);</code></pre><p><img src="https://i.imgur.com/ACeBcJv.png" alt=""></p>
+<hr>
+<h3>c_all()</h3><h4>Apply Style to All Text (Does not support Multi Text)</h4><p>This function is like cc() but style applies to all string!</p>
+<pre class="prettyprint source"><code>Q: Why does this exists ?
+A: Sometimes i want to apply multiple styles to one single string without making extra effort
+Q: Then, you can do it with cc() with one single text and multi styles... Right ?
+A: Yes , you can do both...</code></pre><p><strong>cc_all( TEXT , [STYLES ...] ) ;</strong></p>
+<pre class="prettyprint source"><code>TEXT {style}    : Text you want to write
+
+[ STYLES ]  {*} : (Optional) you can check list of STYLES [here](#list-of-styles)</code></pre><ul>
+<li><p>Example :</p>
+<pre class="prettyprint source lang-javascript"><code>      cc_all(&quot;Hello World&quot;, bold, large, red, underline);
+      // this line will generate console.log message with bold, large, red , underline style</code></pre></li>
+</ul>
+<p><img src="https://i.imgur.com/puumnUB.png" alt=""></p>
+<hr>
+<h3>cc_line()</h3><h4>Line Break</h4><p>This function draws a line in Console.log</p>
+<p><strong>cc_line( [COLOR ])</strong></p>
+<pre class="prettyprint source"><code>[ COLOR ] {string} : (Optional) Color of Line</code></pre><p>Example :</p>
+<pre class="prettyprint source lang-javascript"><code>    cc_line();
+    /* Draws a Line in Console (Color: &quot;black&quot; by default) */
+    cc_line(&quot;red&quot;);
+    /* Draws a &quot;red&quot; Line in Console  */        </code></pre><p><img src="https://i.imgur.com/bqO6dtk.png" alt=""></p>
+<hr>
+<h3>cc_logo()</h3><h4>Console Log with Custom Icons 😎 (My Favourite One)</h4><p>You want Icons in your Console Log ? 😎</p>
+<p>You can make console.log messages with Custom Icons ---&gt; Icons List <a href="#list-of-icons">Here</a></p>
+<p><strong>cc_icon( ICON , TEXT , [ TITLE ]);</strong></p>
+<pre class="prettyprint source"><code>    ICON {*} : Name of Icon you want to add (See Icons List)
+
+    TEXT {string} : Text you want to write
+
+    [Title] {string} : (Optional) Title of your Message</code></pre><ul>
+<li>Example :</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>    cc_icon(icon_diamond, &quot;Wowww&quot;);
+    /* Console.log with Diamond Icon and with no Title */
+    cc_icon(icon_facebook, &quot;https://facebook.com/Ademkouki.Officiel&quot;, &quot;Facebook&quot;);
+    /* Console.log with Facebook Icon and &quot;Facebook&quot; title */
+    cc_icon(icon_heart, &quot;Don't forget to like & Share CoolConsole&quot;)
+    /* Console.log with Heart Icon */
+</code></pre><p><img src="https://i.imgur.com/08m58lj.png" alt=""></p>
+<hr>
+<blockquote>
+<h3>Advanced Usage</h3></blockquote>
+<h3>cc_custom() :</h3><h4>CoolConsole with Custom CSS style</h4><p>if you want to make your own style, 2 steps :</p>
+<ol>
+<li>in your CSS, create a new class. For example, &quot;.custom-console&quot; and add your custom style</li>
+</ol>
+<p>Example :</p>
+<pre class="prettyprint source lang-html"><code>        &lt;style>
+        .custom-console {
+
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-shadow: 1px 2px red ;
+                font-weight: normal;
+                /* Any Style You Want ...*/
+        }
+        &lt;/style></code></pre><ol start="2">
+<li>After that, in your Javascript do:</li>
+</ol>
+<pre class="prettyprint source lang-javascript"><code>            cc_custom(&quot;Your Text Here&quot; , &quot;custom-console&quot;);
+            // cc_custom( TEXT ,  Class Name in CSS ( without Dot '.' )  );</code></pre><ol start="3">
+<li>That's All!</li>
+</ol>
+<p><img src="https://i.imgur.com/anNrXmc.png" alt=""></p>
+<p>🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧</p>
+<p>========[ Warning! ]=========</p>
+<p>🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧</p>
+<p>Don't add  ---&gt; <strong>.</strong> (Dot)  in the classname</p>
+<p>if your class (in CSS) ---&gt; &quot;.myclass&quot; </p>
+<p>type -----&gt; cc_custom(&quot;Your Text&quot;, <strong>&quot;myclass&quot;</strong> );</p>
+<p><strong>You get it ? Right ??</strong> 😅</p>
+<hr>
+<h2>List Of Styles</h2><ul>
+<li>Font Styles :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Font Style</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>Normal Style</td>
+<td>cc(&quot;text&quot;, normal)</td>
+</tr>
+<tr>
+<td>bold</td>
+<td>Bold Style</td>
+<td>cc(&quot;text, bold)</td>
+</tr>
+<tr>
+<td>italic</td>
+<td>italic Style</td>
+<td>cc(&quot;text&quot;, italic)</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>Underline Style</td>
+<td>cc(&quot;text&quot;, underline)</td>
+</tr>
+<tr>
+<td>midline</td>
+<td>Midline Style</td>
+<td>cc(&quot;text&quot;, midline)</td>
+</tr>
+<tr>
+<td>xsmall</td>
+<td>Extra Small Style</td>
+<td>cc(&quot;text&quot;, xsmall)</td>
+</tr>
+<tr>
+<td>small</td>
+<td>Small Style</td>
+<td>cc(&quot;text&quot;, small)</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>Medium Style</td>
+<td>cc(&quot;text&quot;, medium)</td>
+</tr>
+<tr>
+<td>large</td>
+<td>Large Style</td>
+<td>cc(&quot;text&quot;, large)</td>
+</tr>
+<tr>
+<td>xlarge</td>
+<td>Extra Large Style</td>
+<td>cc(&quot;text&quot;, xlarge)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li>Colors :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>red</td>
+<td>Red Font Color</td>
+<td>cc(&quot;text&quot;, red)</td>
+</tr>
+<tr>
+<td>orange</td>
+<td>Orange Font Color</td>
+<td>cc(&quot;text&quot;, orange)</td>
+</tr>
+<tr>
+<td>yellow</td>
+<td>Yellow Font Color</td>
+<td>cc(&quot;text&quot;, yellow)</td>
+</tr>
+<tr>
+<td>green</td>
+<td>Green Font Color</td>
+<td>cc(&quot;text&quot;, green)</td>
+</tr>
+<tr>
+<td>blue</td>
+<td>Blue Font Color</td>
+<td>cc(&quot;text&quot;, blue)</td>
+</tr>
+<tr>
+<td>indigo</td>
+<td>Indigo Font Color</td>
+<td>cc(&quot;text&quot;, indigo)</td>
+</tr>
+<tr>
+<td>violet</td>
+<td>Violet Font Color</td>
+<td>cc(&quot;text&quot;, violet)</td>
+</tr>
+<tr>
+<td>brown</td>
+<td>Brown Font Color</td>
+<td>cc(&quot;text&quot;, brown)</td>
+</tr>
+<tr>
+<td>black</td>
+<td>Black Font Color</td>
+<td>cc(&quot;text&quot;, black)</td>
+</tr>
+<tr>
+<td>grey</td>
+<td>Grey Font Color</td>
+<td>cc(&quot;text&quot;, grey)</td>
+</tr>
+<tr>
+<td>white</td>
+<td>White Font Color</td>
+<td>cc(&quot;text&quot;, white)</td>
+</tr>
+<tr>
+<td>cyan</td>
+<td>Cyan Font Color</td>
+<td>cc(&quot;text&quot;, cyan)</td>
+</tr>
+<tr>
+<td>pink</td>
+<td>Pink Font Color</td>
+<td>cc(&quot;text&quot;, pink)</td>
+</tr>
+<tr>
+<td>navy</td>
+<td>Navy Font Color</td>
+<td>cc(&quot;text&quot;, navy)</td>
+</tr>
+<tr>
+<td>magenta</td>
+<td>Magenta Font Color</td>
+<td>cc(&quot;text&quot;, magenta)</td>
+</tr>
+<tr>
+<td>gold</td>
+<td>Gold Font Color</td>
+<td>cc(&quot;text&quot;, gold)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li>Custom Colors :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Custom Color</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;#ffffff&quot;</td>
+<td>#ffffff Font Color</td>
+<td>cc(&quot;text&quot;, &quot;#ffffff&quot;)</td>
+</tr>
+</tbody>
+</table>
+<p>Example :</p>
+<pre class="prettyprint source lang-javascript"><code>cc(&quot;Text Here&quot; , &quot;#3b00ff&quot; );</code></pre><hr>
+<ul>
+<li>Background Colors :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Background Color</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bg_red</td>
+<td>Red Background Color</td>
+<td>cc(&quot;text&quot;, bg_red)</td>
+</tr>
+<tr>
+<td>bg_orange</td>
+<td>Orange Background Color</td>
+<td>cc(&quot;text&quot;, bg_orange)</td>
+</tr>
+<tr>
+<td>bg_yellow</td>
+<td>Yellow Background Color</td>
+<td>cc(&quot;text&quot;, bg_yellow)</td>
+</tr>
+<tr>
+<td>bg_green</td>
+<td>Green Background Color</td>
+<td>cc(&quot;text&quot;, bg_green)</td>
+</tr>
+<tr>
+<td>bg_blue</td>
+<td>Blue Background Color</td>
+<td>cc(&quot;text&quot;, bg_blue)</td>
+</tr>
+<tr>
+<td>bg_indigo</td>
+<td>Indigo Background Color</td>
+<td>cc(&quot;text&quot;, bg_indigo)</td>
+</tr>
+<tr>
+<td>bg_violet</td>
+<td>Violet Background Color</td>
+<td>cc(&quot;text&quot;, bg_violet)</td>
+</tr>
+<tr>
+<td>bg_brown</td>
+<td>Brown Background Color</td>
+<td>cc(&quot;text&quot;, bg_brown)</td>
+</tr>
+<tr>
+<td>bg_black</td>
+<td>Black Background Color</td>
+<td>cc(&quot;text&quot;, bg_black)</td>
+</tr>
+<tr>
+<td>bg_grey</td>
+<td>Grey Background Color</td>
+<td>cc(&quot;text&quot;, bg_grey)</td>
+</tr>
+<tr>
+<td>bg_white</td>
+<td>White Background Color</td>
+<td>cc(&quot;text&quot;, bg_white)</td>
+</tr>
+<tr>
+<td>bg_cyan</td>
+<td>Cyan Background Color</td>
+<td>cc(&quot;text&quot;, bg_cyan)</td>
+</tr>
+<tr>
+<td>bg_pink</td>
+<td>Pink Background Color</td>
+<td>cc(&quot;text&quot;, bg_pink)</td>
+</tr>
+<tr>
+<td>bg_navy</td>
+<td>Navy Background Color</td>
+<td>cc(&quot;text&quot;, bg_navy)</td>
+</tr>
+<tr>
+<td>bg_magenta</td>
+<td>Magenta Background Color</td>
+<td>cc(&quot;text&quot;, bg_magenta)</td>
+</tr>
+<tr>
+<td>bg_gold</td>
+<td>Gold Background Color</td>
+<td>cc(&quot;text&quot;, bg_gold)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>List Of Icons</h2><blockquote>
+<p>(40) and More ... (Coming Soon)</p>
+</blockquote>
+<p><img src="https://i.imgur.com/VpWflnd.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>icon_flower</td>
+<td>flower Icon</td>
+<td>cc_icon( icon_flower  , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_ok</td>
+<td>OK Icon</td>
+<td>cc_icon( icon_ok       , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_heart</td>
+<td>Heart Icon</td>
+<td>cc_icon( icon_heart   , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_user_f</td>
+<td>Female User Icon</td>
+<td>cc_icon( icon_user_f  , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_user_m</td>
+<td>icon_user_m</td>
+<td>cc_icon( icon_user_m  , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_message</td>
+<td>icon_message</td>
+<td>cc_icon( icon_message , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_facebook</td>
+<td>icon_facebook</td>
+<td>cc_icon( icon_facebook , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_youtube</td>
+<td>icon_youtube</td>
+<td>cc_icon( icon_youtube , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_github</td>
+<td>icon_github</td>
+<td>cc_icon( icon_github , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_add</td>
+<td>icon_add</td>
+<td>cc_icon( icon_add , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_remove</td>
+<td>icon_remove</td>
+<td>cc_icon( icon_remove , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_time</td>
+<td>icon_time</td>
+<td>cc_icon( icon_time , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_music</td>
+<td>icon_music</td>
+<td>cc_icon( icon_music , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_setting</td>
+<td>icon_setting</td>
+<td>cc_icon( icon_setting , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_cursor</td>
+<td>icon_cursor</td>
+<td>cc_icon( icon_cursor , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_star</td>
+<td>icon_star</td>
+<td>cc_icon( icon_star , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_greenflag</td>
+<td>icon_greenflag</td>
+<td>cc_icon( icon_greenflag , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_redflag</td>
+<td>icon_redflag</td>
+<td>cc_icon( icon_redflag , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_yellowflag</td>
+<td>icon_yellowflag</td>
+<td>cc_icon( icon_yellowflag , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_blueflag</td>
+<td>icon_blueflag</td>
+<td>cc_icon( icon_blueflag , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_key</td>
+<td>icon_key</td>
+<td>cc_icon( icon_key , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_love</td>
+<td>icon_love</td>
+<td>cc_icon( icon_love , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_map</td>
+<td>icon_map</td>
+<td>cc_icon( icon_map , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_thumb_up</td>
+<td>icon_thumb_up</td>
+<td>cc_icon( icon_thumb_up , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_thumb_down</td>
+<td>icon_thumb_down</td>
+<td>cc_icon( icon_thumb_down , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_zoomin</td>
+<td>icon_zoomin</td>
+<td>cc_icon( icon_zoomin , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_zoomout</td>
+<td>icon_zoomout</td>
+<td>cc_icon( icon_zoomout , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_wifi</td>
+<td>icon_wifi</td>
+<td>cc_icon( icon_wifi , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_world</td>
+<td>icon_world</td>
+<td>cc_icon( icon_world , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_send</td>
+<td>icon_send</td>
+<td>cc_icon( icon_send , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_hand</td>
+<td>icon_hand</td>
+<td>cc_icon( icon_hand , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_picture</td>
+<td>icon_picture</td>
+<td>cc_icon( icon_picture , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_phone</td>
+<td>icon_phone</td>
+<td>cc_icon( icon_phone , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_folder</td>
+<td>icon_folder</td>
+<td>cc_icon( icon_folder , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_audio</td>
+<td>icon_audio</td>
+<td>cc_icon( icon_audio , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_diamond</td>
+<td>icon_diamond</td>
+<td>cc_icon( icon_diamond , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_money</td>
+<td>icon_money</td>
+<td>cc_icon( icon_money , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_idea</td>
+<td>icon_idea</td>
+<td>cc_icon( icon_idea , &quot;Text Here&quot;)</td>
+</tr>
+<tr>
+<td>icon_computer</td>
+<td>icon_computer</td>
+<td>cc_icon( icon_computer , &quot;Text Here&quot;)</td>
+</tr>
+</tbody>
+</table>
+<h1>Note</h1><p>This library was made in 2 days ( + 1 day for documentation )</p>
+<p>Sorry For my Bad English ... It's my third language , feel free to correct my mistakes...</p>
+<p>If you want to ask me , just send me an email <a href="mailto:ademkingnew@gmail.com">ademkingnew@gmail.com</a>.  😅 </p>
+<h1>License</h1><p>This project is licensed under the MIT open-source license.</p>
+<h1>Contributing</h1><p>If you have any feedback on this wrapper drop us an email to <a href="mailto:ademkingnew@gmail.com">ademkingnew@gmail.com</a>.</p>
+<p>The project is hosted on GitHub at <a href="https://github.com/Ademking/CoolConsole">https://github.com/Ademking/CoolConsole</a>.
+If you would like to contribute a bug fix or improvement please fork the project 
+and submit a pull request.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Methods</h3><ul><li><a href="global.html#add_StyleCustomColorParam">add_StyleCustomColorParam</a></li><li><a href="global.html#add_stylesizeparam">add_stylesizeparam</a></li><li><a href="global.html#cc">cc</a></li><li><a href="global.html#cc_all">cc_all</a></li><li><a href="global.html#cc_bold">cc_bold</a></li><li><a href="global.html#cc_color">cc_color</a></li><li><a href="global.html#cc_custom">cc_custom</a></li><li><a href="global.html#cc_danger">cc_danger</a></li><li><a href="global.html#cc_error">cc_error</a></li><li><a href="global.html#cc_icon">cc_icon</a></li><li><a href="global.html#cc_info">cc_info</a></li><li><a href="global.html#cc_italic">cc_italic</a></li><li><a href="global.html#cc_large">cc_large</a></li><li><a href="global.html#cc_line">cc_line</a></li><li><a href="global.html#cc_medium">cc_medium</a></li><li><a href="global.html#cc_midline">cc_midline</a></li><li><a href="global.html#cc_primary">cc_primary</a></li><li><a href="global.html#cc_rainbow">cc_rainbow</a></li><li><a href="global.html#cc_small">cc_small</a></li><li><a href="global.html#cc_success">cc_success</a></li><li><a href="global.html#cc_underline">cc_underline</a></li><li><a href="global.html#cc_warning">cc_warning</a></li><li><a href="global.html#cc_xlarge">cc_xlarge</a></li><li><a href="global.html#cc_xsmall">cc_xsmall</a></li><li><a href="global.html#cc_zebre">cc_zebre</a></li><li><a href="global.html#check_icon">check_icon</a></li><li><a href="global.html#class_exists">class_exists</a></li><li><a href="global.html#Convert2String">Convert2String</a></li><li><a href="global.html#get_style">get_style</a></li><li><a href="global.html#isStringOrNumber">isStringOrNumber</a></li><li><a href="global.html#isTextNotParam">isTextNotParam</a></li><li><a href="global.html#test_customcolor">test_customcolor</a></li><li><a href="global.html#test_sizeparam">test_sizeparam</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Jun 26 2018 16:59:37 GMT+0100 (Afr. centrale Ouest)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

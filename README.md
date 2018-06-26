@@ -4,6 +4,7 @@
 <img alt="CoolConsole" src="https://i.imgur.com/BccwhSM.gif" />
 </a>
 <p>😎 CoolConsole Library : The Coolest Browser Console ever </p>
+   <img alt="CoolConsole" src="https://i.imgur.com/BLzLqRJ.gif" />
 </div>
 
 # What is CoolConsole?

@@ -66,7 +66,7 @@ There are 2 types of params : **STYLES (Optinal)** and **TEXT**
     // this line will generate console.log message with bold, large, red , underline style
     // see result below
 ```
-RESULT IMAGE HERE !!
+![](https://i.imgur.com/HlYxDMD.png)
 
 you can also write multiple texts with multiple styles :
 
@@ -81,9 +81,8 @@ you can also write multiple texts with multiple styles :
     // red, medium size "is the Coolest"
     // see result below
 ```
-RESULT IMAGE HERE !!
 
-
+![](https://i.imgur.com/vjzVnZa.png)
 
 ------
 
@@ -122,7 +121,7 @@ Theses functions lets you generate colorful Console.log messages for your needs 
     // this line will generate console.log message with Danger Style (With Custom Title)
 ```
 
-RESULT IMAGE HERE !!
+![](https://i.imgur.com/9xjNxA7.png)
 
 -----
 
@@ -150,7 +149,7 @@ Note: color must be a valid color like (**"red"** , **"green"** , **"blue"** ...
     cc_color("This is a #ff00ff Text !", "#ff00ff");
     // Console.log with #ff00ff font-color
 ```
-RESULT IMAGE HERE !!
+![](https://i.imgur.com/Pc5VokM.png)
 
 
 ------------
@@ -185,7 +184,7 @@ RESULT IMAGE HERE !!
     cc_italic("This is Italic");
     cc_midline("This is MidLine");
     cc_underline("This is Underline");
-    cc_xsmall("This is XSmall);
+    cc_xsmall("This is XSmall");
     cc_small("This is Small");
     cc_medium("This is Medium");
     cc_large("This is Large");
@@ -193,11 +192,7 @@ RESULT IMAGE HERE !!
     
 ``` 
 
-RESULT IMAGE HERE !!
-
-
-
-
+![](https://i.imgur.com/YTx7O3W.png)
 
 -----
 
@@ -218,8 +213,7 @@ This function lets you write console.log message with rainbow colors 🌈 ( *Jus
     cc_rainbow("RAINBOWWWWWWWWW");
 ``` 
 
-RESULT IMAGE HERE !!
-
+![](https://i.imgur.com/lXircRZ.png)
 
 -----
 
@@ -240,7 +234,7 @@ This function lets you write console.log message with Black & White colors 🦓 
     cc_zebre("This Text is Black & White!");
 ```
 
-RESULT IMAGE HERE !!
+![](https://i.imgur.com/ACeBcJv.png)
 
 -----
 
@@ -267,7 +261,7 @@ This function is like cc() but style applies to all string!
         // this line will generate console.log message with bold, large, red , underline style
     ```
 
-    RESULT IMAGE HERE !!
+![](https://i.imgur.com/puumnUB.png)
 
 -----
 
@@ -284,12 +278,12 @@ Example :
     
 ```javascript
     cc_line();
-    /* Draws a Line in Console (Color: "red" by default) */
-    cc_linr("green");
-    /* Draws a "green" Line in Console  */        
+    /* Draws a Line in Console (Color: "black" by default) */
+    cc_line("red");
+    /* Draws a "red" Line in Console  */        
 ```
 
-RESULT IMAGE HERE !!
+![](https://i.imgur.com/bqO6dtk.png)
 
 -----
 
@@ -315,8 +309,11 @@ You can make console.log messages with Custom Icons ---> Icons List [Here](#list
     /* Console.log with Diamond Icon and with no Title */
     cc_icon(icon_facebook, "https://facebook.com/Ademkouki.Officiel", "Facebook");
     /* Console.log with Facebook Icon and "Facebook" title */
+    cc_icon(icon_heart, "Don't forget to like & Share CoolConsole")
+    /* Console.log with Heart Icon */
     
 ```
+![](https://i.imgur.com/08m58lj.png)
 
 -----
 
@@ -352,20 +349,23 @@ Example :
 ```
 3. That's All!
 
-    🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
+![](https://i.imgur.com/anNrXmc.png)
+
+🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
     
-    Warning!
+========[ Warning! ]=========
     
-    🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
+🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
 
-    Don't add "  .  " in the classname
+Don't add  ---> **.** (Dot)  in the classname
 
-    if your class (in CSS) ---> ".myclass" 
+if your class (in CSS) ---> ".myclass" 
     
-    type -----> cc_custom("Your Text", **"myclass"** );
+type -----> cc_custom("Your Text", **"myclass"** );
 
-    **You get it ? Right ??** 😅
+**You get it ? Right ??** 😅
 
+-----
 
 ## List Of Styles
 
@@ -418,7 +418,7 @@ Example :
 Example :
 
 ```javascript
-cc("Text Here" , "#ff00ff" );
+cc("Text Here" , "#3b00ff" );
 ```
 
 -----
@@ -448,6 +448,9 @@ cc("Text Here" , "#ff00ff" );
 
 ## List Of Icons
 
+> (40) and More ... (Coming Soon)
+
+![](https://i.imgur.com/VpWflnd.png)
 
 |  Color               |   Description            |            Example                           |
 | -------------------- | ------------------------ | -------------------------------------------- |
@@ -495,9 +498,9 @@ cc("Text Here" , "#ff00ff" );
 
 # Note
 
-This library is made in 2 days ( + 1 day for documentation )
+This library was made in 2 days ( + 1 day for documentation )
 
-Sorry For my Bad English ... it's my third language , feel free to correct my mistakes...
+Sorry For my Bad English ... It's my third language , feel free to correct my mistakes...
 
 If you want to ask me , just send me an email [ademkingnew@gmail.com][1].  😅 
 
